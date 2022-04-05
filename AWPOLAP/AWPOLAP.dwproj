@@ -6,10 +6,71 @@
     <Name>AWPOLAP.database</Name>
     <FullPath>AWPOLAP.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Sales.cube</Name>
+      <FullPath>Sales.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Sales.partitions</Name>
+          <FullPath>Sales.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Product.dim</Name>
+      <FullPath>Product.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Calendar.dim</Name>
+      <FullPath>Calendar.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Territory.dim</Name>
+      <FullPath>Territory.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Customer.dim</Name>
+      <FullPath>Customer.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>OrderDetails.dim</Name>
+      <FullPath>OrderDetails.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>AWPDW.ds</Name>
+      <FullPath>AWPDW.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>AWPDW.dsv</Name>
+      <FullPath>AWPDW.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>AWPDW</Id>
+            <Name>AWPDW</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-5H6628A\SQL;Password=;User ID=;Initial Catalog=AWPDW</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>AWPDW</Id>
+            <Name>AWPDW</Name>
+            <Value xsi:type="xsd:int">1</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
