@@ -35,10 +35,6 @@
       <Name>Customer.dim</Name>
       <FullPath>Customer.dim</FullPath>
     </ProjectItem>
-    <ProjectItem>
-      <Name>OrderDetails.dim</Name>
-      <FullPath>OrderDetails.dim</FullPath>
-    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>
